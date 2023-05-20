@@ -1,105 +1,109 @@
-body{
+body {
     margin: 0%;
-    
     padding: 0%;
-    margin-top: 350px;
+    margin-top: 24.6%; /* changed static margin to relative */
     display: flex;
-    align-items:center;
+    align-items: center;
     justify-content: center;
     box-sizing: border-box;
     background: black;
 }
 
-section{
-    
+section {
+
     position: absolute;
-    width: 100vw;
-    height: 100vh;
+    width: 120vw; /* adjusted height and width by +20 to cover black spaces */
+    height: 120vh; 
     display: flex;
-    align-items:center;
+    align-items: center;
     justify-content: center;
     gap: 2px;
     flex-wrap: wrap;
     overflow: hidden;
-    
+
 }
 
 
-.sp{
+.sp {
     position: relative;
-    height:calc(5.25vw - 2px);
+    height: calc(5.25vw - 2px);
     width: calc(5.25vw - 2px);
     display: block;
     z-index: 1;
-    background-color:#222;
+    background-color: #222;
     transition: 1.5s;
-  
-
 }
 
-.sp:hover{
+.sp:hover {
     background-color: #0f0f;
     transition: 0s;
 }
-section::before{
+
+section::before {
     content: '';
     position: absolute;
     width: 100%;
     height: 100%;
     z-index: -2;
     height: 100%;
-    background: linear-gradient(black,black,#0f0f,black,black);
+    background: linear-gradient(black, black, #0f0f, black, black);
     animation: ani 5s linear infinite;
 }
 
-@keyframes ani{
-    0%{
+@keyframes ani {
+    0% {
         transform: translateY(-100%);
     }
-    100%{
+
+    100% {
         transform: translateY(100%);
     }
 }
 
-section .signin{
+section .signin {
     position: absolute;
     width: 300px;
-   z-index: 10;
-   
-    background:#222;
+    z-index: 10;
+
+    background: #222;
     display: flex;
-    align-items:center;
+    align-items: center;
     justify-content: center;
     padding: 30px;
     border-radius: 10px;
     box-shadow: 1px 1px 30px black;
-    
+
 }
-section .signin .content{
+
+section .signin .content {
     position: relative;
     width: 100%;
     display: flex;
-    align-items:center;
+    align-items: center;
     justify-content: center;
     flex-direction: column;
 }
-section .signin .content h2{
- color: #0f0f; 
- font-size: 2em ;
+
+section .signin .content h2 {
+    color: #0f0f;
+    font-size: 2em;
 
 }
-section .signin .content .form{
- width: 100%;
- display: flex;
- flex-direction: column;
- gap: 20px;
+
+section .signin .content .form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 
 }
-section .signin .content .form .ib{
-position: relative;
-width: 100%;
+
+section .signin .content .form .ib {
+    position: relative;
+    width: 100%;
 }
-section .signin .content .form .ib input{
+
+section .signin .content .form .ib input {
     position: relative;
     width: 100%;
     background-color: transparent;
@@ -111,7 +115,8 @@ section .signin .content .form .ib input{
     color: white;
     font-size: 1em;
 }
-section .signin .content .form .ib i{
+
+section .signin .content .form .ib i {
     position: absolute;
     top: -0px;
     left: 0;
@@ -121,29 +126,33 @@ section .signin .content .form .ib i{
     pointer-events: none;
     transition: 0.5s;
 }
-.signin .content .form .ib input:focus ~ i,
-.signin .content .form .ib input:valid ~ i
-{
+
+.signin .content .form .ib input:focus~i,
+.signin .content .form .ib input:valid~i {
     transform: translateY(-20px);
     font-size: 1em;
     color: white;
 }
+
 section .signin .content .form .link {
     position: relative;
     width: 100%;
     display: flex;
     justify-content: space-between;
-    
+
 }
-section .signin .content .form .link a{
+
+section .signin .content .form .link a {
     text-decoration: none;
     color: white;
 }
-section .signin .content .form .link a:nth-child(2){
+
+section .signin .content .form .link a:nth-child(2) {
     color: #0f0f;
     font-weight: 600;
-     
+
 }
+
 section .signin .content .form .n {
     position: relative;
     background: transparent;
@@ -151,21 +160,19 @@ section .signin .content .form .n {
     display: flex;
     justify-content: center;
     align-items: center;
-    
+
 }
-.b{
+
+.b {
     background-color: #0f0f;
     border: none;
     outline: none;
     width: 80px;
     height: 30px;
     box-shadow: 1px 1px 30px black;
-   
+
 }
-.b:hover{
+
+.b:hover {
     box-shadow: 1px 1px 30px #0f0f;
 }
-
-
-
-
